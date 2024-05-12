@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useEffect, useRef } from 'react';
-import NewsCard from '../components/newsCard';
+import NewsCard from '../../components/newsCard';
 import { motion } from 'framer-motion';
 
 const NewsPage = () => {

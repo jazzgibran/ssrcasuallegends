@@ -1,5 +1,5 @@
 import React from 'react';
-import partyBackgroundImg from '../assets/partybg.png';
+import partyBackgroundImg from '../../assets/partybg.png';
 import Image from 'next/image';
 
 const About = () => {
@@ -7,7 +7,7 @@ const About = () => {
         <div
             className="min-h-screen lg:mb-16">
             <div className='w-full opacity-40 absolute '>
-                <Image src={partyBackgroundImg} className='hidden lg:block w-full'></Image>
+                <Image alt='background' src={partyBackgroundImg} className='hidden lg:block w-full'></Image>
             </div>
             <div className="z-10 relative container mx-auto py-12 px-4 ">
                 <div
@@ -57,7 +57,12 @@ const About = () => {
     );
 }
 
-const Members = ({ name, role }) => {
+interface MembersProps {
+    name: string;
+    role: string;
+}
+
+const Members = ({ name, role }: MembersProps) => {
     return (
         <div
             className="border-teal-400 border bg-GreenMist bg-opacity-70 rounded-lg shadow-lg p-6" >

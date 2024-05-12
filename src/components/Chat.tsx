@@ -18,7 +18,14 @@ const ChatInterface = () => {
     );
 }
 
-const Chat = ({ messages }) => {
+interface Message {
+    playerName: string;
+    playerMsg: string;
+    dmMsg: React.ReactNode;
+    playerImg: string;
+}
+
+const Chat = ({ messages }: { messages: Message[] }) => {
     const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
     const [progress, setProgress] = useState(0);
     const intervalRef = useRef(null); // Ref for storing interval
@@ -28,7 +35,7 @@ const Chat = ({ messages }) => {
         onSwipedRight: () => handleMessageChange('prev')
     });
 
-    const handleMessageChange = (direction) => {
+    const handleMessageChange = (direction: 'next' | 'prev') => {
         if (direction === 'next') {
             setCurrentMessageIndex((prevIndex) => (prevIndex + 1) % messages.length);
             setProgress(0);
@@ -38,13 +45,13 @@ const Chat = ({ messages }) => {
         }
     };
 
-    const handleJumpToMessage = (index) => {
+    const handleJumpToMessage = (index: number) => {
         setCurrentMessageIndex(index);
         setProgress(0);
     };
 
     useEffect(() => {
-        const handleKeyDown = (event) => {
+        const handleKeyDown = (event: KeyboardEvent) => {
             if (event.key === 'ArrowLeft') {
                 handleMessageChange('prev');
             } else if (event.key === 'ArrowRight') {

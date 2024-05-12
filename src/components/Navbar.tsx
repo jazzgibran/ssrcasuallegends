@@ -19,7 +19,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center relative">
         <Link href="/" className=" flex items-center gap-x-3 text-2xl font-bold">
-          <Image src={icon} className='w-12'></Image> Casual Legends
+          <Image alt='icon' src={icon} className='w-12'></Image> Casual Legends
         </Link>
         <div className="md:hidden">
           <button onClick={toggleBurger} className="  focus:outline-none">
@@ -65,7 +65,13 @@ const Navbar = () => {
   );
 };
 
-const NavItem = ({ to, text, onClick }) => {
+interface NavItemProps {
+  to: string;
+  text: string;
+  onClick?: () => void;
+}
+
+const NavItem = ({ to, text, onClick }: NavItemProps) => {
   return (
     <Link href={to}>
     <li
@@ -105,7 +111,13 @@ const DropdownMenu = () => {
   );
 };
 
-const DropdownItem = ({ to, text, description }) => {
+interface DropdownItemProps {
+  to: string;
+  text: string;
+  description: string;
+}
+
+const DropdownItem = ({ to, text, description }: DropdownItemProps) => {
   return (
     <li
       className="hover:bg-Putty hover:bg-opacity-50 px-4 py-2 cursor-pointer"

@@ -37,8 +37,7 @@ const CharacterCreationPage = () => {
     }) //set form to empty
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     const isFormEmpty = Object.entries(form).filter(([key, value]) => key == 'background').some(([key, value]) => value === "");
     if (isFormEmpty) {
       setShowModal(true); // Show the modal if form is empty
@@ -47,18 +46,9 @@ const CharacterCreationPage = () => {
     setCurrentStep(currentStep + 1); //to the copy paste   
   };
 
-  const nextStep = (e) => {
-    e.preventDefault();
+  const nextStep = () => {
     const isFormEmpty = Object.entries(form).filter(([key, value]) => key !== 'background').some(([key, value]) => value === "");
-    if (isFormEmpty) {
-      setShowModal(true); // Show the modal if form is empty
-      return;
-    }
-    if(manualRace === ""){
-      setShowModal(true); // Show the modal if form is empty
-      return;
-    }
-    if(manualClass === ""){
+    if (isFormEmpty || manualRace === "" || manualClass === "") {
       setShowModal(true); // Show the modal if form is empty
       return;
     }
@@ -69,8 +59,8 @@ const CharacterCreationPage = () => {
     setCurrentStep(currentStep - 1);
   };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target as HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
     setForm(prevForm => ({
       ...prevForm,
       [name]: value
@@ -157,7 +147,11 @@ const CharacterCreationPage = () => {
   );
 };
 
-const EmptyFieldsModal = ({ handleClose }) => {
+interface EmptyFieldsModalProps {
+  handleClose: () => void; // Define the type of handleClose as a function returning void
+}
+
+const EmptyFieldsModal = ({ handleClose }: EmptyFieldsModalProps) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-75">
       <div className="max-w-sm w-full p-8 text-white border-teal-400 border bg-slate-800 shadow-lg rounded-lg">
@@ -175,7 +169,23 @@ const EmptyFieldsModal = ({ handleClose }) => {
 };
 
 // Step 1 of the form
-const Step1Form = ({ nextStep, handleClose, form, manualRace, setManualRace, manualClass, setManualClass, handleChange }) => {
+interface Step1FormProps {
+  nextStep: () => void;
+  handleClose: () => void;
+  form: {
+    name: string;
+    race: string;
+    class: string;
+    background: string;
+  };
+  manualRace: string;
+  setManualRace: (value: string) => void;
+  manualClass: string;
+  setManualClass: (value: string) => void;
+  handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => void;
+}
+
+const Step1Form = ({ nextStep, handleClose, form, manualRace, setManualRace, manualClass, setManualClass, handleChange }: Step1FormProps) => {
   // Sample race options, you can replace it with your actual race options
   const raceOptions = ["Human", "Elf", "Dwarf", "Orc", "Gnome"];
   const classOptions = ["Fighter", "Wizard", "Sorcerer", "Bard", "Warlock"];
@@ -282,7 +292,10 @@ const Step1Form = ({ nextStep, handleClose, form, manualRace, setManualRace, man
         {/* button */}
         <div className="flex justify-end space-x-4">
           <button
-            onClick={nextStep}
+            onClick={(e) => {
+              e.preventDefault(); // Prevent default button click behavior
+              nextStep(); // Cast to any to bypass type checking
+            }}
             className="bg-teal-800 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
             Next
@@ -302,7 +315,19 @@ const Step1Form = ({ nextStep, handleClose, form, manualRace, setManualRace, man
 
 
 // Step 2 of the form
-const Step2Form = ({ prevStep, handleSubmit, form, handleChange }) => {
+interface Step2FormProps {
+  prevStep: () => void;
+  handleSubmit: () => void;
+  form: {
+    name: string;
+    race: string;
+    class: string;
+    background: string;
+  };
+  handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => void;
+}
+
+const Step2Form = ({ prevStep, handleSubmit, form, handleChange }: Step2FormProps) => {
   return (
     <>
       <h2 className="text-lg font-semibold">Step 2: Background</h2>
@@ -315,10 +340,9 @@ const Step2Form = ({ prevStep, handleSubmit, form, handleChange }) => {
             value={form.background}
             onChange={handleChange}
             name="background"
-            type="text"
             className="px-3 py-2 mt-1 block w-full rounded-lg text-slate-600  border-gray-300 shadow-sm focus:border-blue-300 focus:ring 
             focus:ring-blue-200 focus:ring-opacity-50"
-            rows="10"
+            rows={10}
           />
         </div>
         <div className="flex justify-between">
@@ -329,7 +353,10 @@ const Step2Form = ({ prevStep, handleSubmit, form, handleChange }) => {
             Previous
           </button>
           <button
-            onClick={handleSubmit}
+            onClick={(e) => {
+              e.preventDefault(); // Prevent default button click behavior
+              handleSubmit(); // Cast to any to bypass type checking
+            }}
             className="bg-teal-800 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
             Submit
@@ -340,7 +367,20 @@ const Step2Form = ({ prevStep, handleSubmit, form, handleChange }) => {
   );
 };
 
-const Step3Form = ({ prevStep, handleClose, form, manualRace, manualClass }) => {
+interface Step3FormProps {
+  prevStep: () => void;
+  handleClose: () => void;
+  form: {
+    name: string;
+    race: string;
+    class: string;
+    background: string;
+  };
+  manualRace: string;
+  manualClass: string;
+}
+
+const Step3Form = ({ prevStep, handleClose, form, manualRace, manualClass }: Step3FormProps) => {
   return (
     <>
       <h2 className="text-lg font-semibold mb-4">Step 3: Copy Paste in Your Game</h2>

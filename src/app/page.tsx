@@ -3,8 +3,8 @@ import Link from 'next/link';
 import bgImgWide from '../app/assets/background.png';
 import bgImgMobile from '../app/assets/backgroundmobile.png';
 import Image from 'next/image';
-import ChatInterface from './components/Chat';
-import Testimonials from './components/Testimonials';
+import ChatInterface from '../components/Chat';
+import Testimonials from '../components/Testimonials';
 
 export default function Home() {
     return (
@@ -12,10 +12,10 @@ export default function Home() {
             className="container mx-auto min-h-screen flex flex-col justify-center items-center text-center" >
             {/* bg image */}
             <div className='w-full hidden xl:block min-h-screen absolute bottom-0'>
-                <Image src={bgImgWide} className='opacity-60 w-full absolute bottom-0'></Image>
+                <Image alt='background' src={bgImgWide} className='opacity-60 w-full absolute bottom-0'></Image>
             </div>
             <div className='w-full xl:hidden min-h-screen absolute flex items-center justify-center bottom-0'>
-                <Image src={bgImgMobile} className=' opacity-60 w-full absolute sm:bottom-0'></Image>
+                <Image alt='background' src={bgImgMobile} className=' opacity-60 w-full absolute sm:bottom-0'></Image>
             </div>
             {/* play section */}
             <div
@@ -62,16 +62,19 @@ export default function Home() {
             {/* Testimonials Section */}
             <div className='flex flex-col  gap-y-5 mb-10  lg:flex-row lg:justify-evenly items-center lg:items-start'>
                 <Testimonials
+                    img={''}
                     msg="Lorem ipsumolestiae. Numquam corrupti in laborum sed rerum et corporis."
                     name="John Doe"
                     role="CEO"
                 />
                 <Testimonials
+                img={''}
                     msg="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis."
                     name="John Doe"
                     role="CEO"
                 />
                 <Testimonials
+                img={''}
                     msg="Lorem ipsum dolor apiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis."
                     name="John Doe"
                     role="CEO"

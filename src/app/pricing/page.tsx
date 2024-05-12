@@ -40,7 +40,15 @@ const Pricing = () => {
   );
 };
 
-const PricingCard = ({ title, price, features, subscribe = "Subscribe", to}) => {
+interface PricingCardProps {
+  title: string;
+  price: string;
+  features: string[];
+  subscribe?: string;
+  to: string;
+}
+
+const PricingCard = ({ title, price, features, subscribe = "Subscribe", to}: PricingCardProps) => {
   return (
     <div
       className="border-teal-400 flex flex-col justify-between border bg-GreenMist bg-opacity-70  rounded-lg overflow-hidden shadow-lg p-6"
