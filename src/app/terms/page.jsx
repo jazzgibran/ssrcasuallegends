@@ -22,7 +22,7 @@ const TermsOfService = () => {
 
           <h2 className="text-xl font-bold text-gray-800 mb-4">3. Disclaimer</h2>
           <p className="text-gray-700 mb-6">
-            The game is provided on an 'as is' basis. We make no warranties, expressed or implied,
+            The game is provided on an &apos;as is&apos; basis. We make no warranties, expressed or implied,
             and hereby disclaim and negate all other warranties including, without limitation,
             implied warranties or conditions of merchantability.
           </p>

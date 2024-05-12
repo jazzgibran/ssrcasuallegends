@@ -183,7 +183,7 @@ const Step1Form = ({ nextStep, handleClose, form, manualRace, setManualRace, man
   return (
     <div className="">
       <h2 className="text-lg font-semibold ">Step 1: Basic Information</h2>
-      <h5 className=" font-semibold mb-4 ">Fill in your character's name, race, and class.</h5>
+      <h5 className=" font-semibold mb-4 ">Fill in your character&apos;s name, race, and class.</h5>
       <form className="space-y-4">
         {/* Your form fields for step 1 */}
         <div>
@@ -306,7 +306,7 @@ const Step2Form = ({ prevStep, handleSubmit, form, handleChange }) => {
   return (
     <>
       <h2 className="text-lg font-semibold">Step 2: Background</h2>
-      <h2 className="font-semibold mb-4">Make up your character's background.</h2>
+      <h2 className="font-semibold mb-4">Make up your character&apos;s background.</h2>
       <form className="space-y-4">
         {/* Your form fields for step 2 */}
         <div>
