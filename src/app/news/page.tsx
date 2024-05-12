@@ -3,11 +3,19 @@ import React, { useState, useEffect, useRef } from 'react';
 import NewsCard from '../../components/newsCard';
 import { motion } from 'framer-motion';
 
-const NewsPage = () => {
-  const [selectedNews, setSelectedNews] = useState(null);
-  const popupRef = useRef(null);
+interface NewsItem {
+  id: number;
+  title: string;
+  content: string;
+  date: string;
+  shortdesc: string;
+}
 
-  const news = [
+const NewsPage = () => {
+  const [selectedNews, setSelectedNews] = useState<NewsItem | null>(null);
+  const popupRef = useRef<HTMLDivElement>(null);
+
+  const news: NewsItem[] = [
     {
       id: 1,
       title: "Rumors of Dragon Sightings",
@@ -25,7 +33,7 @@ const NewsPage = () => {
     // Add more news items as needed
   ];
 
-  const handleNewsClick = (newsItem) => {
+  const handleNewsClick = (newsItem: NewsItem) => {
     setSelectedNews(newsItem);
   };
 
@@ -34,8 +42,8 @@ const NewsPage = () => {
   };
 
   useEffect(() => {
-    const handleOutsideClick = (e) => {
-      if (popupRef.current && !popupRef.current.contains(e.target)) {
+    const handleOutsideClick = (e: MouseEvent) => {
+      if (popupRef.current && !popupRef.current.contains(e.target as Node)) {
         setSelectedNews(null);
       }
     };
