@@ -1,7 +1,14 @@
 import Image from 'next/image'
 import React from 'react'
 
-function Testimonials({ msg, img, name, role }) {
+interface TestimonialsProps {
+    msg: string;
+    img: string;
+    name: string;
+    role: string;
+}
+
+function Testimonials({ msg, img, name, role }: TestimonialsProps) {
     return (
         <section className="relative flex flex-col rounded-lg justify-between min-h-[330px] w-[90%] lg:max-w-[30%] bg-GreenMist px-6 py-8 lg:px-8">
             <blockquote className="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
