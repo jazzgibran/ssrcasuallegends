@@ -28,7 +28,7 @@ interface Message {
 const Chat = ({ messages }: { messages: Message[] }) => {
     const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
     const [progress, setProgress] = useState(0);
-    const intervalRef = useRef(null); // Ref for storing interval
+    const intervalRef = useRef<NodeJS.Timeout | null>(null); // Ref for storing interval
 
     const swipeHandlers = useSwipeable({
         onSwipedLeft: () => handleMessageChange('next'),
@@ -70,14 +70,14 @@ const Chat = ({ messages }: { messages: Message[] }) => {
         intervalRef.current = setInterval(() => {
             setProgress((prevProgress) => {
                 if (prevProgress > 100) {
-                    handleMessageChange('next');
+                    handleMessageChange('prev');
                     return 0;
                 }
                 return prevProgress + 3; // Increase progress bar width by 3% every 150ms
             });
         }, 150); // Update progress bar every 150 milliseconds
 
-        return () => clearInterval(intervalRef.current); // Clean up the interval on unmount
+        return () => clearInterval(intervalRef.current as unknown as number); // Clean up the interval on unmount
     }, []);
 
     const { playerName, playerMsg, dmMsg, playerImg } = messages[currentMessageIndex];
