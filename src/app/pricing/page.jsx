@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Pricing = () => {
   return (
     <div
-      className="pb-14 min-h-screen text-MountainMeadow flex ">
+      className="pb-14 min-h-screen flex flex-col justify-center items-center text-MountainMeadow flex ">
       <div
         className="container mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold text-center mb-8">Choose Your Adventure</h1>
