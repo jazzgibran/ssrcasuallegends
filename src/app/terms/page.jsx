@@ -2,7 +2,7 @@ const TermsOfService = () => {
   return (
     <div className="min-h-screen flex flex-col justify-center items-center">
       <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="max-w-3xl mx-auto p-8 shadow-lg rounded-lg">
+        <div className="max-w-3xl mx-auto bg-Putty bg-opacity-50 p-8 shadow-lg rounded-lg">
           <h1 className="text-3xl font-bold text-gray-800 mb-6">Terms of Service</h1>
           <p className="text-gray-700 mb-6">
             Please read these terms of service carefully before using our game.

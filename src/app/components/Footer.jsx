@@ -137,7 +137,7 @@ const Footer = () => {
                             </svg>
                             Lorem ipsum
                         </p>
-                        <p className="mb-4 flex items-center justify-center md:justify-start">
+                        <p className="mb-4 flex items-center justify-center lg:justify-start">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24"
@@ -150,7 +150,7 @@ const Footer = () => {
                             </svg>
                             Loremipsum@gmail.com
                         </p>
-                        <p className="mb-4 flex items-center justify-center md:justify-start">
+                        <p className="mb-4 flex items-center justify-center lg:justify-start">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24"
@@ -163,7 +163,7 @@ const Footer = () => {
                             </svg>
                             + 01 234 567 88
                         </p>
-                        <p className="flex items-center justify-center md:justify-start">
+                        <p className="flex items-center justify-center lg:justify-start">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24"
