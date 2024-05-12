@@ -32,7 +32,7 @@ const GameplayPage = () => {
                     className="mb-8"
                 >
                     <h2 className="text-center text-3xl font-bold mb-4">Explore the Game World</h2>
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full">
+                    <div className="flex justify-center items-center flex-col lg:flex-row gap-4 w-full">
                         <Screenshot />
                         <Screenshot />
                         <Screenshot />

@@ -52,15 +52,15 @@ const Footer = () => {
             </div>
 
             {/* <!-- Main container div: holds the entire content of the footer, including four sections (TW Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. --> */}
-            <div className="mx-6 py-10 text-center md:text-left">
-                <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-5">
+            <div className="mx-6 py-10 text-center lg:text-left">
+                <div className="grid-1 grid gap-8 lg:grid-cols-5">
                     {/* <!-- Casual Legends section --> */}
                     <div className="">
                         <h6
-                            className="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start">
+                            className="mb-4 flex items-center justify-center font-semibold uppercase lg:justify-start">
                             Casual Legends
                         </h6>
-                        <p>
+                        <p className='text-justify'>
                         Immersive role-playing adventure game. It is an RPG similar to D&D in which you roll the dice at key moments to determine your level of 
                         success or failure. But more importantly, it is a theatre of the mind in which you co-create the story and the world with AI.
                         </p>
@@ -68,7 +68,7 @@ const Footer = () => {
                     {/* <!-- Legal section --> */}
                     <div className="">
                         <h6
-                            className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+                            className="mb-4 flex justify-center font-semibold uppercase lg:justify-start">
                             Legal
                         </h6>
                         <ul className="flex flex-col ">
@@ -83,7 +83,7 @@ const Footer = () => {
                     {/* <!-- Useful links section --> */}
                     <div className="">
                         <h6
-                            className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+                            className="mb-4 flex justify-center font-semibold uppercase lg:justify-start">
                             Useful links
                         </h6>
                         <p className="mb-4">
@@ -100,7 +100,7 @@ const Footer = () => {
                     {/* Download section */}
                     <div>
                         <h6
-                            className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+                            className="mb-4 flex justify-center font-semibold uppercase lg:justify-start">
                             TRY FOR FREE
                         </h6>
                         <ul className="flex flex-col space-y-4">
