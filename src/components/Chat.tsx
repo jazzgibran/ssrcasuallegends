@@ -70,7 +70,7 @@ const Chat = ({ messages }: { messages: Message[] }) => {
         intervalRef.current = setInterval(() => {
             setProgress((prevProgress) => {
                 if (prevProgress > 100) {
-                    handleMessageChange('prev');
+                    handleMessageChange('next');
                     return 0;
                 }
                 return prevProgress + 3; // Increase progress bar width by 3% every 150ms

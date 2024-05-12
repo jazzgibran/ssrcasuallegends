@@ -1,7 +1,13 @@
 // NewsCard.js
 import React from 'react';
 
-const NewsCard = ({title, shortdesc, date }) => {
+interface NewsCardProps {
+  title: string;
+  shortdesc: string;
+  date: string;
+}
+
+const NewsCard: React.FC<NewsCardProps> = ({ title, shortdesc, date }) => {
   return (
     <div
       className=" p-6 rounded-lg shadow-md border-teal-400 border bg-GreenMist bg-opacity-60"
