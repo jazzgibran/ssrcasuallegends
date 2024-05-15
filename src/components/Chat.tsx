@@ -80,7 +80,7 @@ const Chat = ({ messages }: { messages: Message[] }) => {
         return () => clearInterval(intervalRef.current as unknown as number); // Clean up the interval on unmount
     }, []);
 
-    const { playerName, playerMsg, dmMsg, playerImg } = messages[currentMessageIndex];
+    const { playerName, playerMsg, dmMsg, playerImg } = messages[currentMessageIndex] || { playerName: '', playerMsg: '',dmMsg: '', playerImg: '' };
 
     return (  
             <div {...swipeHandlers} className="p-4 bg-Putty bg-opacity-40 rounded-lg">
