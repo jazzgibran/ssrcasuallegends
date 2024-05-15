@@ -12,11 +12,11 @@ export default function Home() {
             className="container mx-auto min-h-screen flex flex-col justify-center items-center text-center" >
             {/* bg image */}
             <div className='w-full hidden xl:block min-h-screen absolute bottom-0'>
-                <Image alt='background' src={bgImgWide} className='opacity-60 w-full absolute bottom-0'></Image>
+                <Image alt='background' src={bgImgWide} className='opacity-90 w-full object-cover h-screen absolute'></Image>
             </div>
-            <div className='w-full xl:hidden min-h-screen absolute flex items-center justify-center bottom-0'>
+            {/* <div className='w-full xl:hidden min-h-screen absolute flex items-center justify-center bottom-0'>
                 <Image alt='background' src={bgImgMobile} className=' opacity-60 w-full absolute sm:bottom-0'></Image>
-            </div>
+            </div> */}
             {/* play section */}
             <div
                 id='play' className="z-10 px-7 h-screen flex flex-col items-center justify-center" >
@@ -59,7 +59,7 @@ export default function Home() {
             </div>
 
             {/* Testimonials Section */}
-            <div className='flex flex-col  gap-y-5 mb-10  lg:flex-row lg:justify-evenly items-center lg:items-start'>
+            <div className='flex flex-col flex-wrap gap-x-9 gap-y-5 mb-10  lg:flex-row lg:justify-evenly items-center lg:items-start'>
                 <Testimonials
                     img={'https://via.placeholder.com/150'}
                     msg="Discovering this game was a turning point for our team's downtime. It's engaging, fun, and wonderfully crafted."

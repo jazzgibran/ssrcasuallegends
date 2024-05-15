@@ -38,7 +38,7 @@ const About = () => {
                 </div>
             </div>
             {/* team */}
-            <div className="mt-8 text-[#CC0507] flex items-center flex-col text-center">
+            <div className="mt-8 text-MountainMeadow  flex items-center flex-col text-center">
                 <div
                     className="relative flex justify-center w-[330px] h-[150px] items-center "
                 >
@@ -49,7 +49,7 @@ const About = () => {
                         <p className="">Product Sorcerer</p>
                     </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <Members name="Hung" role="Bard Engineer" />
                     <Members name="Nate" role="Code Wizard" />
                     <Members name="Elliot" role="Data Elf " />
