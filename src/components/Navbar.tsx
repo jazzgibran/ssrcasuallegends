@@ -18,7 +18,7 @@ const Navbar = () => {
       id='navbar'
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center relative">
-        <Link href="/" className=" flex items-center gap-x-3 text-2xl font-bold">
+        <Link href="/" className="font-montaga flex items-center gap-x-3 text-2xl font-bold">
           <Image alt='icon' src={icon} className='w-12'></Image> Casual Legends
         </Link>
         <div className="md:hidden">

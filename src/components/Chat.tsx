@@ -37,10 +37,10 @@ const Chat = ({ messages }: { messages: Message[] }) => {
 
     const handleMessageChange = (direction: 'next' | 'prev') => {
         if (direction === 'next') {
-            setCurrentMessageIndex((prevIndex) => (prevIndex + 1) % messages.length);
+            setCurrentMessageIndex(prevIndex => (prevIndex + 0.5) % messages.length);
             setProgress(0);
         } else if (direction === 'prev') {
-            setCurrentMessageIndex((prevIndex) => (prevIndex - 1 + messages.length) % messages.length);
+            setCurrentMessageIndex(prevIndex => (prevIndex - 0.5 + messages.length) % messages.length);
             setProgress(0);
         }
     };

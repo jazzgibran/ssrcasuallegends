@@ -26,6 +26,10 @@ const config: Config = {
       },
       boxShadow: {
         'ylg': '0px -10px 15px -3px rgba(0,0,0,0.3);',
+      },
+      fontFamily: {
+        'montaga': ['var(--font-mont)'],
+        'scaly': ['var(--font-scaly)']
       }
     },
   },

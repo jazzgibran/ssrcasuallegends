@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Montaga } from "next/font/google";
+import localFont from 'next/font/local'
 import "./globals.css";
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 
-const inter = Inter({ subsets: ["latin"] });
+const montaga = Montaga({ weight: ["400"],subsets: ["latin"],variable: '--font-mont', });
+const scaly = localFont({src: '../assets/ScalySans.otf', variable: '--font-scaly',})
 
 export const metadata: Metadata = {
   title: "Casual Legends",
@@ -18,12 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-      <Navbar/>
+      <body className={`${montaga.variable} ${scaly.variable} font-scaly`}>
       <main>
+      <Navbar/>
       {children}
-      </main>
       <Footer/>
+      </main>
         </body>
     </html>
   );

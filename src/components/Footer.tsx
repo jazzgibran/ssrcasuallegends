@@ -51,11 +51,11 @@ const Footer = () => {
                 </div>
             </div>
 
-            {/* <!-- Main container div: holds the entire content of the footer, including four sections (TW Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. --> */}
+            {/* <!-- Main container div: holds the entire content of the footer, with responsive styling and appropriate padding/margins. --> */}
             <div className="mx-6 py-10 text-center lg:text-left">
                 <div className="grid-1 grid gap-8 lg:grid-cols-5">
                     {/* <!-- Casual Legends section --> */}
-                    <div className="">
+                    <div className="w-1/2 mx-auto lg:w-full">
                         <h6
                             className="mb-4 flex items-center justify-center font-semibold uppercase lg:justify-start">
                             Casual Legends

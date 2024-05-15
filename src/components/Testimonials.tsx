@@ -21,6 +21,8 @@ function Testimonials({ msg, img, name, role }: TestimonialsProps) {
                     className="mx-auto h-10 w-10 rounded-full"
                     src={img}
                     alt="img"
+                    width={150}
+                    height={150}
                 />
                 <div className="mt-4 flex items-center justify-center space-x-3 text-base">
                     <div className="font-semibold text-gray-900">{name}</div>

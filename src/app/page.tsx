@@ -22,7 +22,6 @@ export default function Home() {
                 id='play' className="z-10 px-7 h-screen flex flex-col items-center justify-center" >
                 <h1 className="text-4xl md:text-8xl font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-GreenMist mb-4">
                     Welcome Adventurer...
-
                 </h1>
                 <p className="text-lg md:text-xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-GreenMist mb-5 ">
                     Dive into a world of magic and mystery, where every decision shapes your destiny.
@@ -62,22 +61,22 @@ export default function Home() {
             {/* Testimonials Section */}
             <div className='flex flex-col  gap-y-5 mb-10  lg:flex-row lg:justify-evenly items-center lg:items-start'>
                 <Testimonials
-                    img={''}
-                    msg="Lorem ipsumolestiae. Numquam corrupti in laborum sed rerum et corporis."
-                    name="John Doe"
-                    role="CEO"
+                    img={'https://via.placeholder.com/150'}
+                    msg="Discovering this game was a turning point for our team's downtime. It's engaging, fun, and wonderfully crafted."
+                    name="Elena Gilbert"
+                    role="CTO"
                 />
                 <Testimonials
-                img={''}
-                    msg="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis."
-                    name="John Doe"
-                    role="CEO"
+                img={'https://via.placeholder.com/150'}
+                    msg="The level of detail and creativity in this game is outstanding. It's not just a game, but a journey that keeps you hooked."
+                    name="Marcus Fenix"
+                    role="Lead Developer"
                 />
                 <Testimonials
-                img={''}
-                    msg="Lorem ipsum dolor apiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis."
-                    name="John Doe"
-                    role="CEO"
+                img={'https://via.placeholder.com/150'}
+                    msg="A fantastic escape into a world where every choice matters. Our whole office loves the challenges and stories."
+                    name="Rachel Green"
+                    role="Marketing Director"
                 />
 
             </div>
