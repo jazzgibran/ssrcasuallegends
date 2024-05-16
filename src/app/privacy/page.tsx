@@ -1,4 +1,8 @@
-
+import { Metadata } from 'next';
+ 
+export const metadata: Metadata = {
+    title: 'Privacy Policy',
+  };
 const PrivacyPolicy = () => {
     return (
         <div className="min-h-screen flex flex-col justify-center items-center">

@@ -11,7 +11,7 @@ interface NewsItem {
   shortdesc: string;
 }
 
-const NewsPage = () => {
+const BlogPage = () => {
   const [selectedNews, setSelectedNews] = useState<NewsItem | null>(null);
   const popupRef = useRef<HTMLDivElement>(null);
 
@@ -103,4 +103,4 @@ const NewsPage = () => {
   );
 };
 
-export default NewsPage;
+export default BlogPage;

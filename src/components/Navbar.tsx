@@ -65,8 +65,9 @@ const Navbar = () => {
     <ul className={`hidden md:flex relative`}>
       <NavItem to="/about" text="About" />
       <NavItem to="/pricing" text="Pricing" />
-      <NavItem to="/news" text="News" />
+      <NavItem to="/blog" text="Blog" />
       <DropdownMenu />
+      <NavItem to="https://play.casuallegends.app/" text="Play" />
     </ul>
   </div>
   {burgerOpen && (
@@ -83,9 +84,10 @@ const Navbar = () => {
           </svg>
         </button>
         <ul className="mt-6">
+          <NavItem to="https://play.casuallegends.app/" text="Play" onClick={toggleBurger} />
           <NavItem to="/about" text="About" onClick={toggleBurger} />
           <NavItem to="/pricing" text="Pricing" onClick={toggleBurger} />
-          <NavItem to="/news" text="News" onClick={toggleBurger} />
+          <NavItem to="/blog" text="Blog" onClick={toggleBurger} />
           <NavItem to="/gameplay" text="Gameplay" onClick={toggleBurger} />
           <NavItem to="/character" text="Character Creation" onClick={toggleBurger} />
         </ul>
@@ -134,7 +136,7 @@ const DropdownMenu = () => {
       </li>
       {isOpen && (
         <ul className="absolute text-black right-0 w-[400px] bg-textured2  rounded-md shadow-lg  border-gray-400 border" onMouseEnter={toggleMenu} >
-          <DropdownItem to="/gameplay" text="Gameplay" description="Overview of how the game works." />
+          <DropdownItem to="/gameplay" text="Gameplay" description="Tips for Getting Started." />
           <DropdownItem to="/character" text="Character Creation" description="Guides on creating a character." />
         </ul>
       )}

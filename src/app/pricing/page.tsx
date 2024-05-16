@@ -4,6 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 
+import { Metadata } from 'next';
+ 
+export const metadata: Metadata = {
+    title: 'Pricing',
+  };
+
 const Pricing = () => {
   return (
     <div

@@ -1,3 +1,9 @@
+import { Metadata } from 'next';
+ 
+export const metadata: Metadata = {
+    title: 'Terms Of Service',
+  };
+
 const TermsOfService = () => {
   return (
     <div className="min-h-screen flex flex-col justify-center items-center">

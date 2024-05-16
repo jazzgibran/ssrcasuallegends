@@ -89,7 +89,7 @@ const Footer = () => {
                         <p className="mb-4">
                             <Link href="/pricing" className="hover:text-teal-500">Pricing</Link>
                         </p>
-                        <Link href="/news" className="hover:text-teal-500">Latest Updates</Link>
+                        <Link href="/blog" className="hover:text-teal-500">Latest Updates</Link>
                         <p className="mb-4">
                         </p>
                         <p className='mb-4'>
@@ -105,7 +105,7 @@ const Footer = () => {
                         </h6>
                         <ul className="flex flex-col space-y-4">
                             <li>
-                                <a href="https://play.casuallegends.app/chat" className="hover:text-teal-500">Legendary App</a>
+                                <a href="https://play.casuallegends.app/" className="hover:text-teal-500">Legendary App</a>
                             </li>
                             <li>
                                 <a href='https://discord.gg/AAuyPtySpr' className="hover:text-teal-500">Discord</a>
