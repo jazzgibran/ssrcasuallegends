@@ -25,7 +25,7 @@ const UnderConstruction = () => {
           />
         </svg>
         <h1 className="mt-6 text-xl font-semibold text-gray-700">Page Under Construction</h1>
-        <p className="text-gray-600">We'll get there soon!</p>
+        <p className="text-gray-600">We&apos;ll get there soon!</p>
       </div>
     </div>
   );
