@@ -38,7 +38,7 @@ const Navbar = () => {
   className="p-4 ws z-20 sticky top-0 w-full"
   initial={{ boxShadow: 'none' }}
   animate={{
-    boxShadow: isScrolled ? '0px 4px 20px rgba(0, 0, 0, 0.2)' : 'none',
+    boxShadow: isScrolled ? '0px 4px 20px rgba(0, 0, 0, 0.2)' : '0px 4px 20px rgba(0, 0, 0, 0.2)',
   }}
   transition={{ duration: 0.3, ease: "easeInOut" }}
 >
@@ -46,12 +46,12 @@ const Navbar = () => {
   <motion.div
     className="absolute inset-0 bg-textured2"
     initial={{ opacity: 0 }}
-    animate={{ opacity: isScrolled ? 1 : 0 }}
+    animate={{ opacity: isScrolled ? 1 : 1 }}
     transition={{ duration: 0.3, ease: "easeInOut" }
   }
   />
   {/* Main Navbar Content */}
-  <div className={`${isScrolled? '': 'text-GreenMist drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]'}  max-w-7xl mx-auto flex justify-between items-center relative`}>
+  <div className={`max-w-7xl mx-auto flex justify-between items-center relative`}>
     <Link href="/" className={` font-montaga flex items-center gap-x-3 text-2xl font-bold  `}>
       <Image alt='icon' src={icon} className='w-12'></Image> Casual Legends
     </Link>

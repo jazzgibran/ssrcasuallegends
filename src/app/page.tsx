@@ -11,7 +11,7 @@ export default function Home() {
             className="container mx-auto min-h-screen flex flex-col justify-center items-center text-center" >
             {/* bg image */}
             <div className='w-full min-h-screen absolute bottom-0'>
-                <Image alt='background' src={bgImgWide} className='opacity-90 w-full object-cover h-screen absolute'></Image>
+                <Image alt='background' src={bgImgWide} className='opacity-75 w-full object-cover h-screen absolute'></Image>
             </div>
          
             {/* play section */}
